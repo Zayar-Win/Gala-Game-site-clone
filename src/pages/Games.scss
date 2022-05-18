@@ -1,0 +1,97 @@
+.game__container{
+    padding:60px 10vw;
+    background-color: #2B2B30;
+    .game__detail{
+        background-color: #161618;
+        padding:10px;
+        border-radius: 5px;
+        display: flex;
+
+        .image__container{
+            flex:0 0 50%;
+            max-width:50%;
+            padding:0px 10px 0px 0px;
+            img{
+                width:100%;
+                object-fit: cover;
+            }
+        }
+        .content__container{
+            flex:0 0 50%;
+            max-width: 50%;
+            color:white;
+            padding-left:10px;
+            h2{
+                font-size:1.4rem;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            .details{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                div{
+                    margin-bottom: 30px;
+                    p{
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .buttons{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top:30px;
+                gap:10%;
+                button{
+                    flex:0 0 45%;
+                    padding:3px 20px;
+                    border:1px solid white;
+                    border-radius: 5px;
+                    color:white;
+                    font-weight: 600;
+                    line-height:1.2rem;
+                    font-size:1rem;
+                    background-color: transparent;
+                }
+                .window{    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #268AEF;
+                    border:none;
+                    span{
+                        line-height: 1rem;;
+                    }
+                    
+                    img{
+                        width:27px;
+                        margin-left:5px;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    @media (max-width:900px) {
+        .game__detail{
+            flex-direction: column;
+            .image__container{
+                flex:0 0 100%;
+                max-width: 100%;
+            }
+            .content__container{
+                flex:0 0 100%;
+                max-width: 100%;
+                .details{
+                    div{
+                        margin-bottom: 20px;;
+                    }
+                }
+                .buttons{
+                    margin-top:10px
+                }
+            }
+        }
+    }
+}

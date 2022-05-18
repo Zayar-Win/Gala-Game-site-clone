@@ -1,0 +1,248 @@
+.gala {
+    .first {
+        background-image: linear-gradient(285deg, #28def7, #137cdf);
+
+        .first__container {
+            padding: 0 10vw;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+
+            .left__container {
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin: 40px 0px;
+                z-index: 10;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 30px;
+
+                h2 {
+                    font-size: 2.8rem;
+                    font-weight: 600;
+                    color: white;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    color: white;
+                    line-height: 160%;
+                }
+            }
+
+            .image__container {
+                flex: 0 0 50%;
+                max-width: 50%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+
+                .background__check {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    z-index: 3;
+                    right: 0;
+                    opacity: .5;
+                    bottom: 0;
+
+                    svg {
+                        height: 170%;
+                        position: absolute;
+                        bottom: -30px;
+                    }
+                }
+
+                img {
+                    height: 90%;
+                    z-index: 100;
+                    display: block;
+                    margin-left: 30px;
+                }
+            }
+        }
+
+        @media (max-width:860px) {
+            .first__container {
+                padding: 0 40px;
+
+                .left__container {
+                    h2 {
+                        font-size: 2rem;
+                    }
+
+                    p {
+                        font-size: .9rem;
+                    }
+                }
+
+                .image__container {
+                    img {
+                        height: 60%;
+                    }
+                }
+            }
+        }
+
+        @media (max-width:600px) {
+            .first__container {
+                flex-direction: column;
+
+                .left__container {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+
+                .image__container {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+
+                    .background__check {
+                        left: 0;
+
+                        svg {
+                            stroke-width: 0px;
+                        }
+                    }
+
+                    img {
+                        height: 60%;
+                        width: 70%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .second {
+        padding: 0 10vw;
+        padding-bottom: 30px;
+        background-color: #2B2B30;
+
+        h2 {
+            padding-top: 40px;
+            color: white;
+        }
+
+        .first__way {
+            padding: 20px 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            background-color: #161618;
+            display: flex;
+            align-items: center;
+
+            .image__container {
+                flex: 0 0 auto;
+                padding: 20px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .content__container {
+                color: white;
+
+                h3 {
+                    margin-bottom: 20px;
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    line-height: 150%;
+                }
+
+                button {
+                    margin-top: 30px;
+                    width: 180px;
+                    height: 50px;
+                    background-color: transparent;
+                    border-radius: 5px;
+                    border: 1px solid white;
+                    color: white;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .second__way {
+            padding: 20px 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            background-color: #161618;
+
+            .header__container {
+                display: flex;
+                align-items: center;
+
+                .header__image {
+                    flex: 0 0 auto;
+                    padding: 20px;
+                    padding-left: 0;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .header__content {
+                    padding-left: 20px;
+
+                    h2 {
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        color: white;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            .currency {
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: #011B36;
+                margin: 15px 0px;
+                justify-content: space-between;
+
+                img {
+                    height: 40px
+                }
+
+                button {
+                    width: 250px;
+                    height: 40px;
+                    background-color: transparent;
+                    color: white;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        @media (max-width:600px) {
+            .first__way {
+                flex-direction: column;
+            }
+
+            .second__way {
+                .currency {
+                    flex-direction: column;
+                    gap: 10px;
+
+                    img {
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

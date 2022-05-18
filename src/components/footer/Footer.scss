@@ -1,0 +1,150 @@
+footer{
+    width:100%;
+    background-color: #383a45;
+    padding:15px;
+    .footer__top{
+        display: flex;
+        padding:16px 64px;
+        .top__left{
+            display: flex;
+            flex-grow: 1;
+            gap:20px;
+            .quick__link{
+                h1{
+                    font-size:1rem;
+                    font-weight: 600;
+                    color:rgb(221, 214, 214);
+                    margin-bottom:10px;
+                }
+                ul{
+                    li{
+                        font-weight: 400;
+                        color:rgb(221, 214, 214);
+                    }
+                }
+            }
+        }
+        .top__right{
+            h1{
+                font-size:1rem;
+                    font-weight: 600;
+                    color:rgb(221, 214, 214);
+                    margin-bottom:10px;
+            }
+            ul{
+                display: flex;
+                gap:20px;
+                li{
+                    
+                    .icon__wrapper{
+                        width:54px;
+                        height:54px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &.twitter{
+                            background-color: rgb(29, 161, 242);
+                        }
+                        &.facebook{
+                            background-color:rgb(59, 89, 152);
+                        }
+                        &.utube{
+                            background-color:rgb(196, 48, 43);
+                        }
+                        .icon{
+                            color:white;
+                            font-size:2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer__bottom{
+        display: flex;
+        align-items: center;
+        .options{
+            color:rgb(183, 173, 173);
+            flex-grow: 1;
+            margin:20px 0px;
+            span{
+                font-size:.8rem;
+            }
+            .dot{
+                margin:0px 15px;
+            }
+        }
+        .switch__language{
+            display: flex;
+            align-items: center;
+            .lang{
+                font-size:.8rem;
+                color:rgb(183, 173, 173);
+                margin-right:10px;
+            }
+            .switch__container{
+                position: relative;
+                .language__container{
+                    display: flex;
+                    position:relative;
+                    cursor:pointer;
+                    align-items: center;
+                    border-radius: 5px;
+                    padding:5px 14px;
+                    background-color: #E7F1F8;
+                    gap:10px;
+                    height:32px;
+                    
+                    .country{
+                        display: flex;
+                        align-items: center;
+                        gap:10px;
+                        img{
+                            display: inline-block;
+                            width:27px;
+                            object-fit: cover;
+                        }
+                        span{
+                            font-size:.8rem;
+                        }
+                    }
+                    span{
+                        font-size:.6rem;
+                    }
+                    
+                }
+            }
+            .lang__options{
+                position:absolute;
+                display: none;
+                top:-300%;
+                border-radius: 5px;
+                width:100%;
+                overflow: hidden;
+                .language__container{
+                    border-radius: 0;
+                    border-bottom:1px solid gray;
+                }
+            }
+        }
+    }
+    @media (max-width:760px) {
+        .footer__top{
+            flex-direction: column;
+            padding:15px;
+            .top__right{
+                margin-top:20px;
+            }
+        }
+        .footer__bottom{
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: start;
+           
+            .options{
+                order:1;
+            }
+        }
+    }
+}

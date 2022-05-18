@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --v-anchor-base: #ffffff;
+    --v-primary-base: #454545;
+    --v-primary-lighten5: #c4c4c4;
+    --v-primary-lighten4: #a9a9a9;
+    --v-primary-lighten3: #8f8f8f;
+    --v-primary-lighten2: #757575;
+    --v-primary-lighten1: #5d5d5d;
+    --v-primary-darken1: #2f2f2f;
+    --v-primary-darken2: #1a1a1a;
+    --v-primary-darken3: #000000;
+    --v-primary-darken4: #000000;
+    --v-secondary-base: #2b2b30;
+    --v-secondary-lighten5: #a5a4ab;
+    --v-secondary-lighten4: #8a8a90;
+    --v-secondary-lighten3: #717177;
+    --v-secondary-lighten2: #58585e;
+    --v-secondary-lighten1: #414146;
+    --v-secondary-darken1: #17171b;
+    --v-secondary-darken2: #000000;
+    --v-secondary-darken3: #000000;
+    --v-secondary-darken4: #000000;
+    --v-accent-base: #161618;
+    --v-accent-darken1: #0a0202;
+    --v-error-base: #dd2c00;
+    --v-error-lighten5: #ffc187;
+    --v-error-lighten4: #ffa46c;
+    --v-error-lighten3: #ff8753;
+    --v-error-lighten2: #ff6a39;
+    --v-error-lighten1: #fe4d1f;
+    --v-error-darken1: #bc0000;
+    --v-error-darken2: #9d0000;
+    --v-error-darken3: #7f0000;
+    --v-error-darken4: #630000;
+    --v-info-base: #2196f3;
+    --v-info-lighten5: #d4ffff;
+    --v-info-lighten4: #b5ffff;
+    --v-info-lighten3: #95e8ff;
+    --v-info-lighten2: #75ccff;
+    --v-info-lighten1: #51b0ff;
+    --v-info-darken1: #007cd6;
+    --v-info-darken2: #0064ba;
+    --v-info-darken3: #004d9f;
+    --v-info-darken4: #003784;
+    --v-success-base: #4caf50;
+    --v-success-lighten5: #dcffd6;
+    --v-success-lighten4: #beffba;
+    --v-success-lighten3: #a2ff9e;
+    --v-success-lighten2: #85e783;
+    --v-success-lighten1: #69cb69;
+    --v-success-darken1: #2d9437;
+    --v-success-darken2: #00791e;
+    --v-success-darken3: #006000;
+    --v-success-darken4: #004700;
+    --v-warning-base: #fb8c00;
+    --v-warning-lighten5: #ffff9e;
+    --v-warning-lighten4: #fffb82;
+    --v-warning-lighten3: #ffdf67;
+    --v-warning-lighten2: #ffc24b;
+    --v-warning-lighten1: #ffa72d;
+    --v-warning-darken1: #db7200;
+    --v-warning-darken2: #bb5900;
+    --v-warning-darken3: #9d4000;
+    --v-warning-darken4: #802700;
+    --v-accent1-base: #011b36;
+    --v-accent1-lighten5: #7f8fb3;
+    --v-accent1-lighten4: #657698;
+    --v-accent1-lighten3: #4c5d7e;
+    --v-accent1-lighten2: #344665;
+    --v-accent1-lighten1: #1b304d;
+    --v-accent1-darken1: #000021;
+    --v-accent1-darken2: #00000c;
+    --v-accent1-darken3: #000000;
+    --v-accent1-darken4: #000000;
+    --v-accent2-base: #161618;
+    --v-accent2-lighten5: #89898c;
+    --v-accent2-lighten4: #707073;
+    --v-accent2-lighten3: #58585a;
+    --v-accent2-lighten2: #404043;
+    --v-accent2-lighten1: #2a2a2d;
+    --v-accent2-darken1: #000000;
+    --v-accent2-darken2: #000000;
+    --v-accent2-darken3: #000000;
+    --v-accent2-darken4: #000000;
+    --v-accent3-base: #383a45;
+    --v-accent3-lighten5: #b5b7c4;
+    --v-accent3-lighten4: #9a9ca9;
+    --v-accent3-lighten3: #80828f;
+    --v-accent3-lighten2: #676975;
+    --v-accent3-lighten1: #4f515d;
+    --v-accent3-darken1: #22242f;
+    --v-accent3-darken2: #0d0f1a;
+    --v-accent3-darken3: #000000;
+    --v-accent3-darken4: #000000;
+    --v-accentBerry-base: #262262;
+    --v-accentBerry-lighten5: #aa9ae8;
+    --v-accentBerry-lighten4: #8f80cc;
+    --v-accentBerry-lighten3: #7467b0;
+    --v-accentBerry-lighten2: #5a4f95;
+    --v-accentBerry-lighten1: #40387b;
+    --v-accentBerry-darken1: #070e4a;
+    --v-accentBerry-darken2: #000033;
+    --v-accentBerry-darken3: #000020;
+    --v-accentBerry-darken4: #00000b;
+    --v-accentBlue-base: #268aef;
+    --v-accentBlue-lighten5: #d5ffff;
+    --v-accentBlue-lighten4: #b6f7ff;
+    --v-accentBlue-lighten3: #96dbff;
+    --v-accentBlue-lighten2: #76bfff;
+    --v-accentBlue-lighten1: #53a4ff;
+    --v-accentBlue-darken1: #0071d2;
+    --v-accentBlue-darken2: #0059b6;
+    --v-accentBlue-darken3: #00429b;
+    --v-accentBlue-darken4: #002d80;
+    --v-accentBlueDark-base: #011b36;
+    --v-accentBlueDark-lighten5: #7f8fb3;
+    --v-accentBlueDark-lighten4: #657698;
+    --v-accentBlueDark-lighten3: #4c5d7e;
+    --v-accentBlueDark-lighten2: #344665;
+    --v-accentBlueDark-lighten1: #1b304d;
+    --v-accentBlueDark-darken1: #000021;
+    --v-accentBlueDark-darken2: #00000c;
+    --v-accentBlueDark-darken3: #000000;
+    --v-accentBlueDark-darken4: #000000;
+    --v-accentBlueLight-base: #58afe4;
+    --v-accentBlueLight-lighten5: #efffff;
+    --v-accentBlueLight-lighten4: #d0ffff;
+    --v-accentBlueLight-lighten3: #b3ffff;
+    --v-accentBlueLight-lighten2: #95e6ff;
+    --v-accentBlueLight-lighten1: #77caff;
+    --v-accentBlueLight-darken1: #3694c8;
+    --v-accentBlueLight-darken2: #007bac;
+    --v-accentBlueLight-darken3: #006292;
+    --v-accentBlueLight-darken4: #004a78;
+    --v-accentBlueLightSecondary-base: #1483e0;
+    --v-accentBlueLightSecondary-lighten5: #caffff;
+    --v-accentBlueLightSecondary-lighten4: #abefff;
+    --v-accentBlueLightSecondary-lighten3: #8cd3ff;
+    --v-accentBlueLightSecondary-lighten2: #6cb7ff;
+    --v-accentBlueLightSecondary-lighten1: #489dfd;
+    --v-accentBlueLightSecondary-darken1: #006ac4;
+    --v-accentBlueLightSecondary-darken2: #0053a8;
+    --v-accentBlueLightSecondary-darken3: #003c8d;
+    --v-accentBlueLightSecondary-darken4: #002873;
+    --v-accentGold-base: #dcb577;
+    --v-accentGold-lighten5: #ffffff;
+    --v-accentGold-lighten4: #ffffe4;
+    --v-accentGold-lighten3: #ffffc8;
+    --v-accentGold-lighten2: #ffedac;
+    --v-accentGold-lighten1: #f9d191;
+    --v-accentGold-darken1: #bf9a5e;
+    --v-accentGold-darken2: #a38045;
+    --v-accentGold-darken3: #87672d;
+    --v-accentGold-darken4: #6c4f16;
+    --v-accentLight-base: #c9d6df;
+    --v-accentLight-lighten5: #ffffff;
+    --v-accentLight-lighten4: #ffffff;
+    --v-accentLight-lighten3: #ffffff;
+    --v-accentLight-lighten2: #ffffff;
+    --v-accentLight-lighten1: #e5f2fc;
+    --v-accentLight-darken1: #aebac3;
+    --v-accentLight-darken2: #939fa8;
+    --v-accentLight-darken3: #79858d;
+    --v-accentLight-darken4: #606c74;
+    --v-accentTeal-base: #2af1fd;
+    --v-accentTeal-lighten5: #e4ffff;
+    --v-accentTeal-lighten4: #c4ffff;
+    --v-accentTeal-lighten3: #a3ffff;
+    --v-accentTeal-lighten2: #81ffff;
+    --v-accentTeal-lighten1: #5cffff;
+    --v-accentTeal-darken1: #00d4e0;
+    --v-accentTeal-darken2: #00b8c4;
+    --v-accentTeal-darken3: #009da9;
+    --v-accentTeal-darken4: #00828f;
+    --v-modalBackground-base: #52616b;
+    --v-modalBackground-darken1: #37444d;
+    --v-modalBackground-lighten1: #677680;
+    --v-modalGray-base: #8c9fac;
+    --v-modalGray-darken1: #3e4950;
+    --v-textColor-base: #ffffff;
+    --v-textColor-lighten5: #ffffff;
+    --v-textColor-lighten4: #ffffff;
+    --v-textColor-lighten3: #ffffff;
+    --v-textColor-lighten2: #ffffff;
+    --v-textColor-lighten1: #ffffff;
+    --v-textColor-darken1: #e2e2e2;
+    --v-textColor-darken2: #c6c6c6;
+    --v-textColor-darken3: #ababab;
+    --v-textColor-darken4: #919191;
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    border:none;
+    outline:none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+ul li{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+
+@mixin btn {
+    display:inline-block;
+    padding:.6rem 1rem;
+    border:1px solid var(--v-accentBlue-base);
+    background-color: transparent;
+    color:white;
+    border-radius: 7px;
+    font-size:.9rem;
+    letter-spacing: 1.2px;
+}
+
+
+@mixin desktop{
+    @media (min-width:960px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width:760px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width:460px){
+        @content;
+    }
+}

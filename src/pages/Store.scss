@@ -1,0 +1,301 @@
+.main{
+    width:100%;
+    background-color: #2b2b30;
+    padding-top:40px; 
+    padding-left:10vw;
+    padding-right:10vw;
+    .banner{
+        img{
+            width:100%;
+            object-fit: cover;
+        }
+    }
+    .store{
+        display: flex;
+        flex-wrap: wrap;
+        .filter__container{
+            flex: 0 0 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #161618;
+            padding:20px;
+            margin:20px 0px;
+            gap:10px;
+
+            .selectbox__container{
+                select{
+                    padding:10px;
+                    margin-right:30px;
+                    padding-right:20px;
+                    color:#268AEF;
+                    border:1px solid #268AEF;
+                    background-color: transparent;
+                    font-size:1rem;
+                    option{
+                        display:inline-block;
+                        background-color: #2b2b30;
+                    }
+                }
+            }
+
+            .search__container{
+                display: flex;
+                align-items: center;
+                padding:10px 5px;
+                background-color:#4E4E55;
+                border-radius: 20px;
+                .icon{
+                    margin-right:5px;
+                    margin-left:10px;
+                }
+                input{
+                    border:none;
+                    outline: none;
+                    background-color: transparent;
+                    font-size:1.2rem;
+                }
+            }
+            .filter{
+                display: none;
+                padding:8px 30px;
+                border:1px solid #268AEF;
+                color:#268AEF;
+                cursor: pointer;
+            }
+        }
+        .result__container{
+            display: flex;
+            flex:0 0 100%;
+            max-width:100%;
+            .accordion__list{
+                display: flex;
+                flex:0 0 33.33333%;
+                max-width: 33.33333%;
+                flex-direction: column;
+                padding:20px;
+                .mobile__header{
+                    padding:20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: #2b2b30;
+                    display: none;
+                }
+                .accordion{
+                    
+                    .title{
+                        width:100%;
+                        background-color: #161618;
+                        display: flex;
+                        padding:14px 16px;
+                        border-radius: 5px;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        color:#2381E2;
+                        font-size:1.3rem;
+                        font-weight: 600;
+                        align-items: center;
+                        cursor: pointer;
+                        user-select: none;
+                        justify-content: space-between;
+                        
+                    }   
+                    ul{
+                        overflow: hidden;
+                        max-height:0px;
+                        margin-top:1px;
+                        margin-bottom:1px;
+                        transition: all .3s ease-in-out;
+                        
+                        &.active{
+                            max-height:800px;
+                            }
+                            li{
+                                padding:14px 16px;
+                                color:white;
+                                display: flex;
+                                background-color: #161618;
+                                align-items: center;
+                                input[type="checkbox"]{
+                                    width:20px;
+                                    height:20px;
+                                    border:3px solid white;
+                                    margin-right:20px;
+                                    background-color: transparent;
+                                }
+                                
+                                img{
+                                    width:48px;
+                                    object-fit: cover;
+                                    margin-right:20px;
+                                }
+                            }
+                        }
+                        
+                }
+            }
+            .game__container{
+                flex:0 0 66%;
+                flex-wrap: wrap;
+                padding:20px 0px 0px 0px;
+                display: flex;
+                align-items: center;
+    
+                .game__card{
+                    flex:0 0 calc(100% / 3);
+                    max-width:calc(100% / 3);
+                    margin:0;
+                    padding:5px;
+                    .card__image{
+                        position:relative;
+                        height:250px;
+                        img{
+                            width:100%;
+                            height:100%;
+                            object-fit: cover;
+                        }
+                        .text{
+                            position: absolute;
+                            top:50%;
+                            left:50%;
+                            transform: translate(-50%,-50%) rotate(-18deg);
+                            
+                            h2{
+                                font-size:2.8rem;
+                                color:white;
+                                line-height: 100%;
+                                font-weight: 700;
+                            }
+                            p{
+                                padding:5px;
+                                background-color: white;
+                                color:black;
+                                font-size:1rem;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                    .card__content{
+                        background-color: #161618;
+                        color:white;
+                        padding:10px;
+                        h2{
+                            font-size:1.3rem;
+                            font-weight: 500;
+                        }
+                        p{
+                            padding-bottom:5px;
+                        }
+                        span{
+                            font-size:.9rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media (max-width:1000px) {
+        .store{
+            .filter__container{
+                .search__container{
+                    display: none;
+                }
+                .filter{
+                    display: block;
+                }
+            }
+            .result__container{
+                .accordion__list{
+                    padding:0;
+                    position:fixed;
+                    top:0;
+                    left:0;
+                    bottom:0;
+                    right:0;
+                    opacity: 0;
+                    transform: translateY(100%);
+                    max-width:100%;
+                    z-index: 100;
+                    background-color: #2B2B30;
+                    overflow-y:scroll;
+                    transition: transform .4s ease-in;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+                    
+                    .mobile__header{
+                        display: flex;
+                        position:fixed;
+                        top:0;
+                        left:0;
+                        right:0;
+                        background-color: #2B2B30;
+                        .closebtn{
+                            font-size:2rem;
+                            color:white
+
+                        }
+                        h2{
+                            color:white;
+                        }
+                        span{
+                            color:#2381E2
+                        }
+                    }
+
+                    .first{
+                        padding-top:80px;
+                    }
+
+                &.active{
+                    display: block;
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                }
+                .game__container{
+                    flex:0 0 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    @media (max-width:720px) {
+        
+        .store{
+            .filter__container{
+                .selectbox__container{
+                    select{
+                        padding:5px;
+                    }
+                }
+            }
+            .result__container{
+                
+                .game__container{
+                    .game__card{
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+            }
+        }
+        
+    }
+    @media (max-width:520px) {
+        .store{
+            .result__container{
+                .game__container{
+                    .game__card{
+                        flex:0 0 100%;
+                        max-width:100%;
+                    }
+                }
+            }
+        }
+    }
+}

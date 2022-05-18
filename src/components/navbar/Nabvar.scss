@@ -1,0 +1,153 @@
+@import "../../index";
+
+.navbar__container{
+    .navbar{
+        height:60px;
+        background-color: var(--v-accent-base);
+        
+        .navbar__content{
+            box-sizing: content-box;
+            padding:4px 16px;
+            height:60px;
+            display: flex;
+            height:100%;
+            align-items: center;
+
+            .logo{
+                margin-right:8px;
+                img{
+                    max-width:93px;
+                    max-height: 48px;
+                    object-fit: cover;
+                }
+            }
+
+            .left__icon{
+                display: none;
+            }
+
+            .navbar__items{
+                padding-left:20px;
+                display: flex;
+                flex-direction: row;
+                gap:16px;
+                a{
+                    min-width:64px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    &.active::before{
+                        content: "";
+                        position: absolute;
+                        width:70%;
+                        height:4px;
+                        background-color:var(--v-accentBlue-base);
+                        bottom:-7px;
+                    }
+                    span{
+                        font-size:.875rem;
+                        color:white;
+                        letter-spacing: 1.1px;
+                        
+                    }
+                }
+            }
+            .discord{
+                height:100%;
+                display: flex;
+                padding-left:20px;
+                align-items: center;
+                img{
+                    height:2.2em;
+                    object-fit: cover;
+                    margin-right:6px;
+                }
+                span{
+                    color:white;
+                    font-size:.875rem;
+                }
+            }
+
+            .hidden__div{
+                flex-grow: 1;
+            }
+            .auth__buttons{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                gap:20px;
+                .btn{
+                    @include btn;
+                }
+                .register__btn{
+                    color:var(--v-accentBlue-base)
+                }
+                .login__btn{
+                    background-color: var(--v-accentBlue-base);
+                }
+            }
+        }
+    }
+
+    @media (max-width:960px) 
+    {
+        .navbar{
+            .navbar__content{
+                .navbar__items{
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width:760px) 
+    {
+        .navbar{
+            .navbar__content{
+
+                .logo{
+                    display: none;
+                }
+                .left__icon{
+                    display: block;
+                    color:white;
+                    font-size:1.5rem;
+                    font-weight: 800;
+                }
+
+                .hidden__div{
+                    flex-grow:0
+                }
+
+                .discord{
+                    margin-right:10px;
+                }
+
+                .spacer{
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+
+    @media (max-width:460px) {
+        .navbar{
+            .navbar__content{
+                .discord{
+                    span{
+                        display: none;
+                    }
+                }
+
+                .auth__buttons{
+                    .btn{
+                        padding:4px 7px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
